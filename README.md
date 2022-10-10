@@ -1,7 +1,9 @@
 # food-app
 ## Usage
 1 - Create new dir called "food-app"
+
 2 - Enter dir and pull this repo
+
 3 - In the "food-app" dir create the following docker-compose.yml file
 ```
 version: '3.1'
