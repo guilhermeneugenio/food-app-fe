@@ -1,7 +1,7 @@
 <template>
     <div class="recipe-block">
        <h1>{{title}}</h1>
-       <img v-bind:src="image_url" /> 
+       <img :src="image_url" /> 
        <p v-for="(step, index) in recipe">
           <p>{{ $t('wording.step') + ' ' + (index + 1) }}</p>
           {{ step }}
