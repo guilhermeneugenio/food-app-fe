@@ -1,35 +1,27 @@
 # food-app
+## Usage
+1 - Create new dir called "food-app"
 
-This template should help get you started developing with Vue 3 in Vite.
+2 - Enter dir and pull this repo
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+3 - In the "food-app" dir create the following docker-compose.yml file
 ```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
+version: '3.1'
+services:
+  food-app-fe:
+    container_name: food-app-fe
+    build:
+      context: ./food-app-fe
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+       - ./food-app-fe:/usr/src/app/food-app-fe
+       - /usr/src/app/food-app-fe/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
 ```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
+4 - Run
 ```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+docker-compose -f docker-compose.yml up -d
 ```
