@@ -1,10 +1,12 @@
-# food-app
+# food-app-fe
 ## Usage
 1 - Create new dir called "food-app"
 
-2 - Enter dir and pull this repo
+2 - Enter dir and clone this repo
 
-3 - In the "food-app" dir create the following docker-compose.yml file
+3 - Also, clone this repo https://github.com/mleitao27/food-app-be.git
+
+4 - In the "food-app" dir create the following docker-compose.yml file
 ```
 version: '3.1'
 services:
@@ -21,7 +23,7 @@ services:
     environment:
       - CHOKIDAR_USEPOLLING=true
 ```
-4 - Run
+5 - Run
 ```
 docker-compose -f docker-compose.yml up -d
 ```
