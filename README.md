@@ -22,6 +22,18 @@ services:
        - /usr/src/app/food-app-fe/node_modules
     environment:
       - CHOKIDAR_USEPOLLING=true
+  food-app-be:
+    container_name: food-app-be
+    build:
+      context: ./food-app-be
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+       - ./food-app-be:/usr/src/app/food-app-be
+       - /usr/src/app/food-app-be/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
 ```
 5 - Run
 ```
