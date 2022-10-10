@@ -1,3 +1,6 @@
 {
-  "wording": "Hello"
+  "wording": {
+    "hello": "Hello",
+    "step": "Step"
+  }
 }
