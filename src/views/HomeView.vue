@@ -1,8 +1,10 @@
 <script setup></script>
 
 <template>
-  <main>
-    <p>App</p>
-    <p class="text-2xl">{{ $t("wording.hello") }}</p>
-  </main>
+  <router-link to="/results">Generate Recipes</router-link>
+  <!-- <RouterLink to="/recipe">Recipe</RouterLink> -->
 </template>
+
+<script>
+  // import { RouterLink, RouterView } from 'vue-router'
+</script>

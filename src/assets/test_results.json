@@ -1,0 +1,19 @@
+{
+    "sobremesa": {
+        "name": "Mousse de chocolate com avelã e abacate",
+        "image_url": "https://www.pingodoce.pt/wp-content/uploads/2018/06/Mousse-de-chocolate-com-avela.jpg"
+    },
+    "sopa": { 
+        "name": "Sopa de cenoura com courgette e batata-doce",
+        "image_url": "https://www.pingodoce.pt/wp-content/uploads/2017/08/sopa-de-cenoura-com-courgette-e-batata-doce.jpg"
+    },
+    "bebida": null,
+    "principal": {  
+        "name": "Estufado de grão vegan",
+        "image_url": "https://www.pingodoce.pt/wp-content/uploads/2022/02/estufado-de-grao-vegan.jpg"
+    },
+    "entradas": {  
+        "name": "Rolinhos de alheira com laranja e frutos secos",
+        "image_url": "https://www.pingodoce.pt/wp-content/uploads/2021/07/rolinhos-de-alheira-com-laranja-e-frutos-secos.jpeg"
+    }
+}
