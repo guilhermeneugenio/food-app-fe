@@ -1,48 +1,56 @@
 <template>
     <div class="recipe-block">
-       <h1>{{title}}</h1>
-       <img :src="image_url" /> 
-       <p v-for="(step, index) in recipe">
+       <h1>{{id}}</h1>
+       <h1>{{recipeJson.name}}</h1>
+       <img :src="recipeJson.image_url" /> 
+       <p v-for="(step, index) in recipeJson.recipe">
           <p>{{ $t('wording.step') + ' ' + (index + 1) }}</p>
           {{ step }}
        </p>
     </div>
 </template>
 
-<script>
-export default{
+<script >
+import recipeJson from "../assets/test_recipe.json";
+
+import { onBeforeMount } from "vue";
+
+export default {
   props: {
-    title: {
-      type: String,
-      default: ''
+    id: {
+      type: Number,
+      default: 0,
     },
-    image_url: {
-      type: String,
-      default: ''
-    },
-    recipe: {
-      type: Array,
-      default: ()=>[]
-    }
-  }
-}
+  },
+  setup(props) {
+    onBeforeMount(async () => {
+      console.log(props.id);
+
+      //await store.dispatch("fetchClients");
+    });
+
+    return {
+      recipeJson,
+    };
+  },
+};
 </script>
 
+
 <style>
-    .recipe-block{
-        background-color: gray;
-    }
+.recipe-block {
+  background-color: gray;
+}
 
-    img{
-      width: 100%
-    }
+img {
+  width: 100%;
+}
 
-    @media (min-width: 500px) {
-      .about {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-      }
-
-    }
+@media (min-width: 500px) {
+  .about {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
 </style>

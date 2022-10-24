@@ -1,33 +1,16 @@
 
 <template>
-  <Recipe :title="recipeJson.name" :image_url="recipeJson.image_url"  :recipe="recipeJson.recipe"></Recipe>
+  <Recipe :id="$route.params.id"></Recipe>
 </template>
 
 <script>
-  import Recipe from '../components/Recipe.vue';
-  import recipeJson from '../assets/test_recipe.json';
+import Recipe from "../components/Recipe.vue";
 
-
-  export default {
-    components: {
-      Recipe
-    },
-    setup(){
-      return {
-        recipeJson
-      }
-    }
-   
-
-  }
+export default {
+  components: {
+    Recipe,
+  },
+};
 </script>
 
-<style>
-/* @media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-} */
-</style>
+<style></style>
